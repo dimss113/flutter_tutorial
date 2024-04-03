@@ -5,13 +5,20 @@ import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: Home(),
+    home: NinjaCard(),
   ));  
 }
 
 // ignore: camel_case_types
-class Home extends StatelessWidget {
-  const Home({super.key});
+class NinjaCard extends StatefulWidget {
+  const NinjaCard({super.key});
+
+  @override
+  State<NinjaCard> createState() => _NinjaCardState();
+}
+
+class _NinjaCardState extends State<NinjaCard> {
+  int ninjaLevel = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -23,32 +30,41 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.brown[600],
       elevation: 0.0,
     ),
-    body: const Padding(
-      padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
+    floatingActionButton: FloatingActionButton(
+      onPressed: () {
+        setState(() {
+          ninjaLevel += 1;
+        });
+      },
+      backgroundColor: Colors.grey[600],
+      child: const Icon(Icons.add),
+    ),
+    body:  Padding(
+      padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Center(
+          const Center(
             child: CircleAvatar(
               backgroundImage: AssetImage('assets/pict_1.jpg'),
               radius: 40.0,
             ),
           ),
-          Divider(
+          const Divider(
             height: 90.0,
             color: Colors.grey,
           ),
-          Text(
+          const Text(
             'NAME',
             style: TextStyle(
               color: Colors.grey,
               letterSpacing: 2.0,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
-          Text(
+          const Text(
             'Killer Bee',
             style: TextStyle(
               color: Color.fromARGB(255, 136, 126, 92),
@@ -57,32 +73,32 @@ class Home extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30.0,
           ),
-          Text(
+          const Text(
             'CURRENT NINJA LEVEL',
             style: TextStyle(
               color: Colors.grey,
               letterSpacing: 2.0,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
           Text(
-            '8',
-            style: TextStyle(
+            '$ninjaLevel',
+            style:const  TextStyle(
               color: Color.fromARGB(255, 136, 126, 92),
               letterSpacing: 2.0,
               fontSize: 28.0,
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30.0,
           ),
-          Row(
+          const Row(
             children: <Widget>[
               Icon(
                 Icons.email,
