@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -20,62 +21,37 @@ class Home extends StatelessWidget {
       centerTitle: true,
       backgroundColor: Colors.brown[600],
     ),
-    body: Container(
-      padding: const EdgeInsets.all(20.0),
-      margin: const EdgeInsets.all(20.0),
-      color: Colors.brown[100],
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Hello dimas fadilah!',
-              style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2.0,
-                color: Colors.grey,
-                fontFamily: 'IndieFlower',
-              ),
-            ),
-            Image.network('https://images.pexels.com/photos/18138254/pexels-photo-18138254/free-photo-of-woman-in-a-dress-dancing.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-            // Image.asset('assets/pict_1.jpg'),
-            const Icon(
-              Icons.airport_shuttle,
-              color: Colors.lightBlue,
-              size: 50.0,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                print('You clicked me!');
-              },
-              style: ElevatedButton.styleFrom(
-                shadowColor: Colors.blue,
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32.0)), 
-                maximumSize: Size(200, 100)
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.access_alarm),
-                  Text('Click me!'),
-                ],
-              )
-            ),
-            IconButton(
-              onPressed: () {
-                print('You clicked me!');
-              },
-              icon: const Icon(Icons.alarm),
-              iconSize: 50.0,
-              color: Colors.red,
-              key: const Key('Alarm'),
-            )
-          ],
+    body: Row(
+      children: <Widget>[
+        Expanded(
+          flex: 3,
+          child: Image.asset('assets/pict_1.jpg')
         ),
-      ),
+        Expanded(
+          flex: 3,
+          child: Container(
+            padding: const EdgeInsets.all(30.0),
+            color: Colors.cyan,
+            child: const Text('1'),
+          ),
+        ),
+        Expanded(
+          flex: 2,
+          child: Container(
+            padding: const EdgeInsets.all(30.0),
+            color: Colors.pinkAccent,
+            child: const Text('2'),
+          ),
+        ),
+        Expanded(
+          flex: 1,
+          child: Container(
+            padding: const EdgeInsets.all(30.0),
+            color: Colors.amberAccent,
+            child: const Text('3'),
+          ),
+        ),
+      ],
     ),
     floatingActionButton: const FloatingActionButton(
       onPressed: null,
