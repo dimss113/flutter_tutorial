@@ -10,7 +10,7 @@ import 'package:flutter_tutorial/pages/loading.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: '/home', // Tambahkan initial route ke /home
+    initialRoute: '/', // Tambahkan initial route ke /home
     routes: {
       '/': (_) => const Loading(),
       '/home': (_) => const Home(),
