@@ -16,50 +16,111 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    backgroundColor: Colors.brown[900],
     appBar: AppBar(
-      title: const Text('Dimas Fadilah'),
+      title: const Text('Ninja ID Card'),
       centerTitle: true,
       backgroundColor: Colors.brown[600],
+      elevation: 0.0,
     ),
-    body: Row(
-      children: <Widget>[
-        Expanded(
-          flex: 3,
-          child: Image.asset('assets/pict_1.jpg')
-        ),
-        Expanded(
-          flex: 3,
-          child: Container(
-            padding: const EdgeInsets.all(30.0),
-            color: Colors.cyan,
-            child: const Text('1'),
+    body: const Padding(
+      padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Center(
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/pict_1.jpg'),
+              radius: 40.0,
+            ),
           ),
-        ),
-        Expanded(
-          flex: 2,
-          child: Container(
-            padding: const EdgeInsets.all(30.0),
-            color: Colors.pinkAccent,
-            child: const Text('2'),
+          Divider(
+            height: 90.0,
+            color: Colors.grey,
           ),
-        ),
-        Expanded(
-          flex: 1,
-          child: Container(
-            padding: const EdgeInsets.all(30.0),
-            color: Colors.amberAccent,
-            child: const Text('3'),
+          Text(
+            'NAME',
+            style: TextStyle(
+              color: Colors.grey,
+              letterSpacing: 2.0,
+            ),
           ),
-        ),
-      ],
-    ),
-    floatingActionButton: const FloatingActionButton(
-      onPressed: null,
-      backgroundColor: Color.fromARGB(255, 179, 148, 141),
-      child: Text('Click'),
-    ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Text(
+            'Killer Bee',
+            style: TextStyle(
+              color: Color.fromARGB(255, 136, 126, 92),
+              letterSpacing: 2.0,
+              fontSize: 28.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(
+            height: 30.0,
+          ),
+          Text(
+            'CURRENT NINJA LEVEL',
+            style: TextStyle(
+              color: Colors.grey,
+              letterSpacing: 2.0,
+            ),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Text(
+            '8',
+            style: TextStyle(
+              color: Color.fromARGB(255, 136, 126, 92),
+              letterSpacing: 2.0,
+              fontSize: 28.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(
+            height: 30.0,
+          ),
+          Row(
+            children: <Widget>[
+              Icon(
+                Icons.email,
+                color: Color.fromARGB(255, 194, 184, 184),
+              ),
+              SizedBox(
+                width: 10.0,
+              ),
+              Text(
+                'dimasfadilah20@gmail.com',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 194, 184, 184),
+                  fontSize: 18.0,
+                  letterSpacing: 1.0,
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    )
   );
   }
 }
 
+class Test extends StatefulWidget {
+  const Test({super.key});
 
+  @override
+  // ignore: library_private_types_in_public_api
+  _TestState createState() => _TestState();
+}
+
+class _TestState extends State<Test> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
+    );
+  }
+}
