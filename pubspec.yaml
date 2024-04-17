@@ -31,6 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^1.2.1
+  intl: ^0.19.0
+  flutter_spinkit: ^5.2.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -63,6 +65,15 @@ flutter:
   assets:
     - assets/pict_1.jpg
     - assets/profil_pict.jpg
+    - assets/day.png
+    - assets/night.png
+    - assets/indonesia.png
+    - assets/usa.svg
+    - assets/uk.png
+    - assets/germany.png
+    - assets/japan.svg
+    - assets/australia.webp
+    - assets/south_korea.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

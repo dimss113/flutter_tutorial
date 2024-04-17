@@ -1,8 +1,6 @@
-import 'dart:collection';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_tutorial/pages/choose_location.dart';
 import 'package:flutter_tutorial/pages/home.dart';
